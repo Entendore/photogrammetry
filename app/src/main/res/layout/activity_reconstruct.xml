@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+
+    <TextView android:id="@+id/scan_title"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textStyle="bold" android:textSize="18sp" />
+
+    <Button android:id="@+id/btn_reconstruct"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:text="Reconstruct (background)" />
+
+    <TextView android:id="@+id/status_text"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginVertical="12dp"
+        android:textSize="14sp"
+        android:text="No reconstruction yet." />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_cancel" android:enabled="false"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="Cancel" />
+        <Button android:id="@+id/btn_share" android:enabled="false"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="Share PLY" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="8dp">
+        <Button android:id="@+id/btn_view_cloud" android:enabled="false"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="View cloud" />
+        <Button android:id="@+id/btn_view_mesh"
+            android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="Mesh viewer" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btn_ar" android:enabled="false"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="⬒  Place model in AR" />
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Photogrammetry" android:textSize="28sp" android:textStyle="bold" />
+
+    <TextView android:id="@+id/ar_status"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" android:text="Checking ARCore…" android:textSize="13sp" />
+
+    <Button android:id="@+id/btn_new_scan"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_marginTop="20dp" android:text="＋ New scan" android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" android:layout_marginBottom="8dp"
+        android:text="PREVIOUS SCANS" android:textSize="12sp" android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_scans"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
