@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_view"
+        android:layout_width="match_parent" android:layout_height="match_parent" />
+
+    <View android:id="@+id/flash"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="#FFFFFF" android:alpha="0"
+        android:clickable="false" android:focusable="false" />
+
+    <TextView android:id="@+id/status_text"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp"
+        android:background="@drawable/bg_pill"
+        android:paddingStart="14dp" android:paddingEnd="14dp"
+        android:paddingTop="7dp" android:paddingBottom="7dp"
+        android:textColor="#FFFFFF" android:text="Starting…" />
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom" android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:paddingStart="8dp" android:paddingEnd="8dp">
+            <LinearLayout android:id="@+id/thumb_row"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <Button android:id="@+id/btn_scan"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Start scan" />
+
+            <Switch android:id="@+id/sw_auto"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingStart="10dp" android:paddingEnd="10dp" android:text="Auto" />
+
+            <Button android:id="@+id/btn_export"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Export" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_photo"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginStart="12dp" android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:text="◉  CAPTURE" android:textSize="16sp" android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>
